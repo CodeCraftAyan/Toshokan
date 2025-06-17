@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toshokan - Add Book</title>
+    <link rel="stylesheet" href="add-book.css">
+    <style>
+        #container{
+            flex-direction: column;
+        }
+        .back-button {
+            margin-top: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="form">
+            <h1>Add Book Details</h1>
+            <form action="add-book.php" method="post" enctype="multipart/form-data">
+                <label>Book Name</label>
+                <input type="text" name="book_name" id="book_name" placeholder="Book Name" required>
+                <label>Book Author</label>
+                <input type="text" name="author" id="author" placeholder="Author Name" required>
+                <label>Book Rating</label>
+                <input type="number" id="rating" name="rating" min="0" max="10" step="0.1" placeholder="Rating" required>
+                <label>Book Front Page</label>
+                <input type="file" id="book_image" name="book_image" accept="image/*" required>
+                <input type="submit" value="ADD BOOK">
+            </form>
+        </div>
+        <button class="back-button" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

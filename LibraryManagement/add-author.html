@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toshokan - Add Author</title>
+    <link rel="stylesheet" href="add-book.css">
+    <style>
+        #container{
+            flex-direction: column;
+        }
+        .back-button {
+            margin-top: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="form">
+            <h1>Add Author Details</h1>
+            <form action="add-author.php" method="post" enctype="multipart/form-data">
+                <label for="author_name">Author Name </label>
+                <input type="text" id="author_name" name="author_name">
+              
+                <label for="nationality">Nationality </label>
+                <select id="nationality" name="nationality">
+                    <option value="" disabled selected>Authors Nationality</option>
+                    <option value="indian">Indian</option>
+                    <option value="american">American</option>
+                    <option value="british">British</option>
+                    <option value="australian">Australian</option>
+                    <option value="canadian">Canadian</option>
+                    <option value="french">French</option>
+                    <option value="german">German</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="japanese">Japanese</option>
+                    <option value="mexican">Mexican</option>
+                    <option value="brazilian">Brazilian</option>
+                    <option value="south_korean">South Korean</option>
+                    <option value="italian">Italian</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="russian">Russian</option>
+                    <option value="south_african">South African</option>
+                  <option value="other">Other</option>
+                </select>
+              
+                <label for="bio">Bio </label>
+                <textarea id="author_bio" name="author_bio" rows="4" cols="50"></textarea>
+
+                <label>Profile Image</label>
+                <input type="file" id="author_image" name="author_image" accept="image/*" required>
+              
+                <input type="submit" value="ADD AUTHOR">
+              </form>
+        </div>
+        <button class="back-button" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> 
+</body>
+</html>

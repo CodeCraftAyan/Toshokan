@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set a modern font */
+    background-color: #f4f4f4; /* Light grey background for the body */
+    color: #333; /* Dark text color */
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+
+.form {
+    background: white; /* White background for the form */
+    padding: 30px; /* Space inside the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    width: 400px; /* Fixed width for the form */
+}
+
+h1 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #007bff; /* Blue color for the heading */
+}
+
+label {
+    display: block; /* Make labels take full width */
+    margin-bottom: 5px; /* Space below the label */
+    font-weight: bold; /* Bold labels */
+}
+
+input,
+textarea,
+select {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space below each input */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for inputs */
+    font-size: 16px; /* Slightly larger font size */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Blue background for the submit button */
+    color: white; /* White text for the button */
+    border: none; /* No border for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background change on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
